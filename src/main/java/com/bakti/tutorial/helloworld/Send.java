@@ -1,4 +1,4 @@
-package com.bakti.tutorial;
+package com.bakti.tutorial.helloworld;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;

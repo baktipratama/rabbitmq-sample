@@ -21,7 +21,16 @@ public class Recv {
         DeliverCallback deliverCallback = (consumerTag, delivery) -> {
             String message = new String(delivery.getBody(), "UTF-8");
             System.out.println(" [x] Received '" + message + "'");
+            try {
+                Thread.sleep(1000l);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         };
         channel.basicConsume(QUEUE_NAME, true, deliverCallback, consumerTag -> { });
     }
+
+//    public static void main(String[] args){
+//        System.out.println("Hello Bakti");
+//    }
 }

@@ -7,7 +7,7 @@ import com.rabbitmq.client.DeliverCallback;
 
 public class Recv {
 
-    private final static String QUEUE_NAME = "hello";
+    private final static String QUEUE_NAME = "simple";
 
     public static void main(String[] argv) throws Exception {
         ConnectionFactory factory = new ConnectionFactory();
@@ -20,7 +20,7 @@ public class Recv {
 
         DeliverCallback deliverCallback = (consumerTag, delivery) -> {
             String message = new String(delivery.getBody(), "UTF-8");
-            System.out.println(" [x] Received '" + message + "'");
+            System.out.println(" [Worker-2] Received '" + message + "'");
         };
         channel.basicConsume(QUEUE_NAME, true, deliverCallback, consumerTag -> { });
     }

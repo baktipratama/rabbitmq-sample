@@ -1,4 +1,4 @@
-package com.bakti.tutorial.multiple_queues;
+package com.bakti.tutorial.fanout;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;

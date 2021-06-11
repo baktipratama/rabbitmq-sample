@@ -1,13 +1,13 @@
-package com.bakti.tutorial.multiple_queues;
+package com.bakti.tutorial.fanout;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.DeliverCallback;
 
-public class Recv1 {
+public class Recv2 {
 
-    private final static String QUEUE_NAME = "queue1";
+    private final static String QUEUE_NAME = "queue2";
 
     public static void main(String[] argv) throws Exception {
         ConnectionFactory factory = new ConnectionFactory();
